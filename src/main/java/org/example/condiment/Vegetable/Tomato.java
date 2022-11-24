@@ -1,0 +1,20 @@
+package org.example.condiment.Vegetable;
+
+import org.example.condiment.CondimentDecorator;
+import org.example.sandwich.Sandwich;
+
+public class Tomato extends CondimentDecorator {
+    public Tomato(final Sandwich sandwich) {
+        this.sandwich = sandwich;
+    }
+
+    @Override
+    public String getDescription() {
+        return sandwich.getDescription() + "토마토 추가  ";
+    }
+
+    @Override
+    public int cost() {
+        return sandwich.cost() + 500;
+    }
+}
